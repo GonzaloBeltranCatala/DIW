@@ -3,8 +3,8 @@ para escribir en vim pulsar i
 
 para salir del vim esc : wq
 
-git pull actualizar desde terminal
+git pull Descargar desde terminal
 
-git commit -a -m
+git commit -a -m "comentario" Escribir comentario
 
-git push
+git push Lanzar a la nube
