@@ -1,0 +1,60 @@
+table {
+    width: 100%;
+    border-top: 1px solid;
+    table-layout:fixed;
+    border-color: grey;
+}
+
+td{
+    border-bottom: 1px solid;
+    border-color: grey;
+}
+img{
+    width: 20%;
+    
+}
+
+#linea-vertical{
+    border-right: 1px solid;
+    border-color: grey;
+    text-align: right;
+}
+
+#centrado{
+    text-align: center;
+}
+
+#miralem{
+    padding-left: 50%;
+    font-size: 70%;
+}
+
+#juventus{
+    width: 15%;
+    margin-left:70%;
+}
+b{
+    font-size: 400%;
+}
+#texto{
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+#lista{
+    padding-left: 42%;
+}
+
+
+li,ul{
+    display:inline;
+    font-weight: bold;
+    padding: 1%;
+    
+   
+}
+li:hover{
+    color:orange;
+}
