@@ -1,0 +1,34 @@
+body{
+    font-family: sans-serif;
+}
+
+#titulo{
+    color: rgb(0, 173, 240);
+    font-weight: bold;
+    
+}
+
+#cara{
+    padding-right: 5%;
+    float: left;
+}
+
+#etiqueta{
+    padding-left: 10%;
+
+    font-size: 80%;
+    
+}
+
+#texto{
+    padding-left: 10%;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(0, 173, 240);
+}
+
+#continue{
+    padding-left: 80%;
+}
