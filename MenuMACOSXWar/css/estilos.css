@@ -1,0 +1,32 @@
+nav{
+    padding-top: 3%;
+}
+
+li{
+    float: left;
+    list-style-type: none;
+    padding-left: 5%;
+}
+
+p{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+li{
+    transition: all .5s ease-in-out;
+}
+li:hover{
+    transform: scale(1.5);
+    transition-duration: 1s;
+    color: red;
+    
+}
+
+img:hover{
+    box-shadow:red;
+    border: 3px solid;
+}
+
+
