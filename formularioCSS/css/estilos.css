@@ -1,0 +1,52 @@
+.titulos {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.inputs {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+#principal{
+    padding: 20px;
+    
+}
+
+legend{
+    margin-bottom: 5%;
+}
+
+input, textarea {
+    width: 70%;
+    padding: 12px;
+    resize: vertical;
+    transition: all .5s ease-in-out;
+}
+
+input:invalid:hover,textarea:valid:hover {
+    border: 1px solid red;
+  }
+  
+input:valid:hover,textarea:valid:hover {
+    border: 1px solid green;
+    transform: scale(1.1);
+    transition-duration: 1s;
+  }
+
+  #boton{
+      margin-top: 2%;
+      padding: 25%
+  }
+
+
+@media screen and (max-width: 600px) {
+    .inputs, {
+        width: 100%;
+        
+    }
+}
+
+
