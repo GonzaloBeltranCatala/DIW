@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="formulario.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form onsubmit="return onSubmit(this)" class="mt-3">
+            <img src="img/gva.png" class="float-left pr-5 mr-5">
+
+            <img src="img/lasenia.png" class="pl-5 ml-5 mb-5">
+
+            <img src="img/contacto.png" class="float-right">
+
+
+            <h4  style="display: none" class="text-center leve">COMUNICACIÓ DE CONDUCTES GREUMENT PERJUDICIALS PER A LA CONVIVENCIA EN EL CENTRE</h4>
+
+            <h4  class="text-center grave">COMUNICACIÓ DE MESURES CORRECTORES</h4>
+
+            <p>ALUMNE/A <input type="text" name="nombre"> GRUP <input type="text" name="grupo"></p>
+            <p>PROFESSOR/A <input type="text" name="profesor"> Horari d´atenció <input type="text" name="horario"></p>
+            <p>Data de l´incident <input type="text" name="fecha"> Hora <input type="text" name="hora"> Lloc <input
+                    type="text" name="lugar"></p>
+
+            <p>Descripció de l´incident:<br /><textarea cols="50" rows="10"></textarea></p>
+
+            Falta Grave <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+
+            <div class="grave">
+                <p>En aplicació de l´article 37 del decret 39/08 sobre drets i deures,es comunica al pare/mare de
+                    l´alumne
+                    la imposició de la següent mesura correctora</p>
+
+                <ol type="A">
+                    <li>Compareixença davant el cap d´estudis/director</li>
+                    <li>Retirada d´aparells electrònics(1)</li>
+                    <li>Privació del temps de recreació els dies <input type="text" name="dias"></li>
+                    <li>Realització de les següents tasques educadores:<input type="text" name="tareas" class="form-control">els
+                        dies <input type="text" name="dias-tarea"> i amb l´horari <input type="text" name="hora-tarea"></li>
+                    <li>Suspensió del dret a participar en activitats extraescolars i complementàries des de <br /><input
+                            type="text" name="inicio-dias"> fins a <input type="text" name="fin-dias">(2)</li>
+                    <li>Suspensió del dret de l´assistència a les classes de <input type="text" name="dias-suspenso">
+                        <br />des
+                        de <input type="text" name="inicio-dias-suspenso">fina a <input type="text" name="fin-dias-suspenso">(2)</li>
+                </ol>
+            </div>
+
+            <p>Tipicació(3) de l´incident segons l´article 42:<select name="incidente">
+
+                    <option value="">Les faltes de puntualitat injustificades</option>
+                    <option value="">Els actes que alteren el normal desenvolupament de les activitats del centre
+                        educatiu,especialment els que alteren el normal desenvolupament de les classes</option>
+                    <option value="">Els actes d´indisciplina</option>
+                    <option value="">Els actes d´incorrecio o desconsideració, les injuries i les ofenses contra els
+                        membres de la comunitat educativa</option>
+                    <option value="">El furt o deteriorament intencionat d´inmobles,materials,documentacio o recursos
+                        del centre</option>
+                    <option value="">El furt o deteriorament intencionat dels béns o materials dels membres de la
+                        comunitat educativa</option>
+                    <option value="">Les accions que purguen ser perjudicials per a la integritat i la salut dels
+                        membres de la comunitat educativa</option>
+                    <option value="">La negativa sistemàtica a portar el material necessari per al desenvolupament del
+                        procés d´ensenyament-aprenentatge</option>
+                    <option value="">La negativa a traslladar la informació facilitada als pares,mares,tutors o tutores
+                        per part del centre i viceversa</option>
+                    <option value="">L´alteraci´o o manipulació de la documentació facilitada als pares,mares,tutors o
+                        tutores per part del centre</option>
+                    <option value="">La suplantació de la personalitat dels membres de la comunitat escolar</option>
+                    <option value="">La utilització inadequada de les tecnologies de la informació i comunicació durant
+                        les activitats que es realitzen en el centre educatiu</option>
+                    <option value="">L´us de telèfons mobils,aparells de so i altres aparells de so i altres aparells
+                        electronics aliens al proces d´ensenyament-aprenentatge.Durant les activitats que es realitzen
+                        en el centre educatiu</option>
+                    <option value="">Els actes que dificulten o impedisquen el dret i el deure de l´estudi dels seus
+                        companys i companyes</option>
+                    <option value="">La incitació o estimul a cometre una falta contrària a les normes de convivència</option>
+                    <option value="">La negativa al compliment de les mesures correctores adoptades davant de conductes
+                        contràries a les normes de convivència</option>
+                    <option value="">L´us inadequat de les infractructures i bens o equips materials del centre</option>
+                    <option value="">La desobediencia en el compliment de les normes de caracter propi del centre i que
+                        estiguen incloses en el seu projecte educatiu</option>
+
+                </select>
+            </p>
+
+            <p>La comunicació als pares es fa pels següents mitjans: Telefon <input type="text" name="telefono"></p>
+            <p> Per correu <input type="text" name="correo"> Per mig de l´alumne <input type="text" name="alumno"></p>
+            <p>Amb Compareixença del pare/mare <input type="text" name="padre"></p>
+
+            <div class="leve" style="display: none">
+                <p>Les conductes greument perjudicials per a la convivencia en el centre docent nomes podran ser
+                    objecte de
+                    mesura <br />
+                    disciplinaria amb la instruccio previa del corresponent expedient disciplinari.(art 45.1)</p>
+
+            </div>
+
+            <p>Paiporta, <input type="text" name="dia-firma">de <input type="text" name="mes-firma"> de 201 <input type="text"
+                    name="year-firma"></p>
+            <p>Signatura del professor/a <input type="text" name="firma-profesor"> Signatura del cap d´estudis/director
+                <input type="text" name="firma-director"></p>
+
+
+            <input type="submit" value="Enviar Formulario">
+
+            <div class="grave">
+                <p>(1)El pare o la mare de l´alumne podrà retirar l´aparell a partir del dia següent de rebre
+                    esta notificació en la direcció d´estudis.
+                </p>
+
+                <p>(2)El pare o la mare de l´alumne disposa d´un termini de 10 dies a partir de rebre esta comunicació
+                    per al preceptiu tràmit d´audiència amb el professor que ha imposat la mesura correctora.Per
+                    la qual cosa l´horari d´atenció del professor figura al costat del seu nom i el telèfon de
+                    l´institut
+                    en capçalera.
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
