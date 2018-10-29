@@ -35,9 +35,10 @@
             <img src="img/contacto.png" class="float-right">
 
 
-            <h4  style="display: none" class="text-center leve">COMUNICACIÓ DE CONDUCTES GREUMENT PERJUDICIALS PER A LA CONVIVENCIA EN EL CENTRE</h4>
+            <h4 style="display: none" class="text-center leve">COMUNICACIÓ DE CONDUCTES GREUMENT PERJUDICIALS PER A LA
+                CONVIVENCIA EN EL CENTRE</h4>
 
-            <h4  class="text-center grave">COMUNICACIÓ DE MESURES CORRECTORES</h4>
+            <h4 class="text-center grave">COMUNICACIÓ DE MESURES CORRECTORES</h4>
 
             <p>ALUMNE/A <input type="text" name="nombre"> GRUP <input type="text" name="grupo"></p>
             <p>PROFESSOR/A <input type="text" name="profesor"> Horari d´atenció <input type="text" name="horario"></p>
@@ -67,7 +68,7 @@
                 </ol>
             </div>
 
-            <p>Tipicació(3) de l´incident segons l´article 42:<select name="incidente">
+            <p class="grave">Tipicació(3) de l´incident segons l´article 35:<select name="incidente">
 
                     <option value="">Les faltes de puntualitat injustificades</option>
                     <option value="">Els actes que alteren el normal desenvolupament de les activitats del centre
@@ -105,22 +106,45 @@
                 </select>
             </p>
 
+            <p class="leve" style="display: none">Tipicació(1) de l´incident segons l´article 42:<select name="incidente">
+
+                <option value="">Els actes greus d´indisciplina i les injuries i ofenses contra membres de la comunitat educativa que sobrepassen la incorreccio o la desconsideracio previstes en el article 35</option>
+                <option value="">L´agressio fisica o moral,les amenaces i coaccions i la discriminacio greu a qualsevol membre de la comunitat educativa, aixi com la falta de respecte greu a la integritat i dignitat personal</option>
+                <option value="">Les vexacions i humiliacions a qualsevols membre de la comunitat escolar, particularment si tenen un comportament sexista o xenofon,aixi com les que es realitzen contra els membres mes vulnerables per les seues caracteristiques personals,socials o educatives</option>
+                <option value="">L´assetjament escolar</option>
+                <option value="">La suplantacio de personalitat en actes de la vida docent</option>
+                <option value="">La falsificacio, el deteriorament o la sustraccio de documentacio academica</option>
+                <option value="">Els danys greus causats en els locals,materials o documents del centre o ens els bens dels membres de la comunitat educativa</option>
+                <option value="">Els actes injustificats que pertoben greument el normal desenvolupament de les activitats del centre</option>
+                <option value="">Les actuacions que puguen perjudicar greument la salut i la integritat personal dels membres de la comunitat educativa</option>
+                <option value="">La introduccio en el centre d´objetes perillosos o subtancies perjudicials per a la salut i la integritat personal del membres de la comunitat educativa</option>
+                <option value="">Les conductes tipificades com a contraries a les normes de convivencia del centre educatiu si concorren circumstancies de col·lectivitat o publicitat intencionada per qualsevol mitja</option>
+                <option value="">La iniciatica o l´estimul a cometre una falta que afecte greument la convivencia del el centre</option>
+                <option value="">La negativa reiterada al compliment de les mesures educatives correctores adoptades davant de conductes contraries a les normes de convivencia</option>
+                <option value="">La negativa reiterada al compliment de les mesures disciplinaries adoptades davant de faltes que afecten greument a la convivencia en el centre</option>
+                <option value="">L´acces indegut o sense autoritzacio a fitxers i servidors del centre</option>
+                <option value="">Actes atemtatoris respecte al projecte educatiu aixi com al caracter propi del centre</option>
+
+                </select>
+            </p>
+
+
             <p>La comunicació als pares es fa pels següents mitjans: Telefon <input type="text" name="telefono"></p>
             <p> Per correu <input type="text" name="correo"> Per mig de l´alumne <input type="text" name="alumno"></p>
             <p>Amb Compareixença del pare/mare <input type="text" name="padre"></p>
 
             <div class="leve" style="display: none">
-                <p>Les conductes greument perjudicials per a la convivencia en el centre docent nomes podran ser
-                    objecte de
-                    mesura <br />
-                    disciplinaria amb la instruccio previa del corresponent expedient disciplinari.(art 45.1)</p>
+                <p><i>Les conductes greument perjudicials per a la convivencia en el centre docent nomes podran ser
+                        objecte de
+                        mesura <br />
+                        disciplinaria amb la instruccio previa del corresponent expedient disciplinari.(art 45.1)</i></p>
 
             </div>
 
             <p>Paiporta, <input type="text" name="dia-firma">de <input type="text" name="mes-firma"> de 201 <input type="text"
                     name="year-firma"></p>
-            <p>Signatura del professor/a <input type="text" name="firma-profesor"> Signatura del cap d´estudis/director
-                <input type="text" name="firma-director"></p>
+             
+            <p>Signatura del cap d´estudis/director <input type="checkbox" name="firma-director"></p>
 
 
             <input type="submit" value="Enviar Formulario">
