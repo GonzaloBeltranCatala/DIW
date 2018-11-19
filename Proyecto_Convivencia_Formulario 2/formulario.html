@@ -21,13 +21,11 @@
     <script src="formulario.js"></script>
 
 
-</head>
-
 <body>
 
     <div class="container">
 
-        <form onsubmit="return onSubmit(this)" class="mt-3">
+        <form class="mt-3" action="http:localhost:3000/incidencias" method="POST">
             <img src="img/gva.png" class="float-left pr-5 mr-5">
 
             <img src="img/lasenia.png" class="pl-5 ml-5 mb-5">
@@ -40,10 +38,10 @@
 
             <h4 class="text-center grave">COMUNICACIÓ DE MESURES CORRECTORES</h4>
 
-            <p>ALUMNE/A <input type="text" name="nombre"> GRUP <input type="text" name="grupo"></p>
+            <p>ALUMNE/A <input type="text" name="alumne"> GRUP <input type="text" name="grupo"></p>
             <p>PROFESSOR/A <input type="text" name="profesor"> Horari d´atenció <input type="text" name="horario"></p>
-            <p>Data de l´incident <input type="text" name="fecha"> Hora <input type="text" name="hora"> Lloc <input
-                    type="text" name="lugar"></p>
+            <p>Data de l´incident <input type="date" name="data"> Hora <input type="time" name="hora"> Lloc <input
+                    type="text" name="lloc"></p>
 
             <p>Descripció de l´incident:<br /><textarea cols="50" rows="10"></textarea></p>
 
@@ -54,53 +52,54 @@
                     l´alumne
                     la imposició de la següent mesura correctora</p>
 
-                <ol type="A">
-                    <li>Compareixença davant el cap d´estudis/director</li>
-                    <li>Retirada d´aparells electrònics(1)</li>
-                    <li>Privació del temps de recreació els dies <input type="text" name="dias"></li>
-                    <li>Realització de les següents tasques educadores:<input type="text" name="tareas" class="form-control">els
-                        dies <input type="text" name="dias-tarea"> i amb l´horari <input type="text" name="hora-tarea"></li>
-                    <li>Suspensió del dret a participar en activitats extraescolars i complementàries des de <br /><input
-                            type="text" name="inicio-dias"> fins a <input type="text" name="fin-dias">(2)</li>
-                    <li>Suspensió del dret de l´assistència a les classes de <input type="text" name="dias-suspenso">
+                <ul class="list-unstyled">
+                    <li> <input type="checkbox" name="opcionA" >Compareixença davant el cap d´estudis/director</li>
+                    <li> <input type="checkbox" name="opcionB" >Retirada d´aparells electrònics(1)</li>
+                    <li><input type="checkbox" name="opcionC" >Privació del temps de recreació els dies <input type="text" name="dias"></li>
+                    <li><input type="checkbox" name="opcionD">Realització de les següents tasques educadores:<input type="text" name="tareas" class="form-control">els
+                        dies <input type="text" name="diastarea"> i amb l´horari <input type="text" name="horatarea"></li>
+                    <li><input type="checkbox" name="opcionE">Suspensió del dret a participar en activitats extraescolars i complementàries des de <br /><input
+                            type="text" name="iniciodias"> fins a <input type="text" name="findias">(2)</li>
+                    <li><input type="checkbox" name="opcionF">Suspensió del dret de l´assistència a les classes de <input type="text" name="diassuspenso">
                         <br />des
-                        de <input type="text" name="inicio-dias-suspenso">fina a <input type="text" name="fin-dias-suspenso">(2)</li>
-                </ol>
+                        de <input type="text" name="iniciodiassuspenso">fina a <input type="text" name="findiassuspenso">(2)</li>
+                </ul>
             </div>
 
             <p class="grave">Tipicació(3) de l´incident segons l´article 35:<select name="incidente">
 
-                    <option value="">Les faltes de puntualitat injustificades</option>
-                    <option value="">Els actes que alteren el normal desenvolupament de les activitats del centre
+                    <option name="leveA">Les faltes de puntualitat injustificades</option>
+                    <option name="leveB">Les faltes de d´assistencia injustificades</option>
+                    <option name="leveC">Els actes que alteren el normal desenvolupament de les activitats del centre
                         educatiu,especialment els que alteren el normal desenvolupament de les classes</option>
-                    <option value="">Els actes d´indisciplina</option>
-                    <option value="">Els actes d´incorrecio o desconsideració, les injuries i les ofenses contra els
+                    <option name="leveD">Els actes d´indisciplina</option>
+                    <option name="leveE">Els actes d´incorrecio o desconsideració, les injuries i les ofenses contra els
                         membres de la comunitat educativa</option>
-                    <option value="">El furt o deteriorament intencionat d´inmobles,materials,documentacio o recursos
+                    <option name="leveF">El furt o deteriorament intencionat d´inmobles,materials,documentacio o recursos
                         del centre</option>
-                    <option value="">El furt o deteriorament intencionat dels béns o materials dels membres de la
+                    <option name="leveG">El furt o deteriorament intencionat dels béns o materials dels membres de la
                         comunitat educativa</option>
-                    <option value="">Les accions que purguen ser perjudicials per a la integritat i la salut dels
+                    <option name="leveH">Les accions que purguen ser perjudicials per a la integritat i la salut dels
                         membres de la comunitat educativa</option>
-                    <option value="">La negativa sistemàtica a portar el material necessari per al desenvolupament del
+                    <option name="leveI">La negativa sistemàtica a portar el material necessari per al desenvolupament del
                         procés d´ensenyament-aprenentatge</option>
-                    <option value="">La negativa a traslladar la informació facilitada als pares,mares,tutors o tutores
+                    <option name="leveJ">La negativa a traslladar la informació facilitada als pares,mares,tutors o tutores
                         per part del centre i viceversa</option>
-                    <option value="">L´alteraci´o o manipulació de la documentació facilitada als pares,mares,tutors o
+                    <option name="leveK">L´alteraci´o o manipulació de la documentació facilitada als pares,mares,tutors o
                         tutores per part del centre</option>
-                    <option value="">La suplantació de la personalitat dels membres de la comunitat escolar</option>
-                    <option value="">La utilització inadequada de les tecnologies de la informació i comunicació durant
+                    <option name="leveL">La suplantació de la personalitat dels membres de la comunitat escolar</option>
+                    <option name="leveM">La utilització inadequada de les tecnologies de la informació i comunicació durant
                         les activitats que es realitzen en el centre educatiu</option>
-                    <option value="">L´us de telèfons mobils,aparells de so i altres aparells de so i altres aparells
+                    <option name="leveN">L´us de telèfons mobils,aparells de so i altres aparells de so i altres aparells
                         electronics aliens al proces d´ensenyament-aprenentatge.Durant les activitats que es realitzen
                         en el centre educatiu</option>
-                    <option value="">Els actes que dificulten o impedisquen el dret i el deure de l´estudi dels seus
+                    <option name="leveO">Els actes que dificulten o impedisquen el dret i el deure de l´estudi dels seus
                         companys i companyes</option>
-                    <option value="">La incitació o estimul a cometre una falta contrària a les normes de convivència</option>
-                    <option value="">La negativa al compliment de les mesures correctores adoptades davant de conductes
+                    <option name="leveP">La incitació o estimul a cometre una falta contrària a les normes de convivència</option>
+                    <option name="leveQ">La negativa al compliment de les mesures correctores adoptades davant de conductes
                         contràries a les normes de convivència</option>
-                    <option value="">L´us inadequat de les infractructures i bens o equips materials del centre</option>
-                    <option value="">La desobediencia en el compliment de les normes de caracter propi del centre i que
+                    <option name="leveR">L´us inadequat de les infractructures i bens o equips materials del centre</option>
+                    <option name="leveS">La desobediencia en el compliment de les normes de caracter propi del centre i que
                         estiguen incloses en el seu projecte educatiu</option>
 
                 </select>
@@ -108,22 +107,22 @@
 
             <p class="leve" style="display: none">Tipicació(1) de l´incident segons l´article 42:<select name="incidente">
 
-                <option value="">Els actes greus d´indisciplina i les injuries i ofenses contra membres de la comunitat educativa que sobrepassen la incorreccio o la desconsideracio previstes en el article 35</option>
-                <option value="">L´agressio fisica o moral,les amenaces i coaccions i la discriminacio greu a qualsevol membre de la comunitat educativa, aixi com la falta de respecte greu a la integritat i dignitat personal</option>
-                <option value="">Les vexacions i humiliacions a qualsevols membre de la comunitat escolar, particularment si tenen un comportament sexista o xenofon,aixi com les que es realitzen contra els membres mes vulnerables per les seues caracteristiques personals,socials o educatives</option>
-                <option value="">L´assetjament escolar</option>
-                <option value="">La suplantacio de personalitat en actes de la vida docent</option>
-                <option value="">La falsificacio, el deteriorament o la sustraccio de documentacio academica</option>
-                <option value="">Els danys greus causats en els locals,materials o documents del centre o ens els bens dels membres de la comunitat educativa</option>
-                <option value="">Els actes injustificats que pertoben greument el normal desenvolupament de les activitats del centre</option>
-                <option value="">Les actuacions que puguen perjudicar greument la salut i la integritat personal dels membres de la comunitat educativa</option>
-                <option value="">La introduccio en el centre d´objetes perillosos o subtancies perjudicials per a la salut i la integritat personal del membres de la comunitat educativa</option>
-                <option value="">Les conductes tipificades com a contraries a les normes de convivencia del centre educatiu si concorren circumstancies de col·lectivitat o publicitat intencionada per qualsevol mitja</option>
-                <option value="">La iniciatica o l´estimul a cometre una falta que afecte greument la convivencia del el centre</option>
-                <option value="">La negativa reiterada al compliment de les mesures educatives correctores adoptades davant de conductes contraries a les normes de convivencia</option>
-                <option value="">La negativa reiterada al compliment de les mesures disciplinaries adoptades davant de faltes que afecten greument a la convivencia en el centre</option>
-                <option value="">L´acces indegut o sense autoritzacio a fitxers i servidors del centre</option>
-                <option value="">Actes atemtatoris respecte al projecte educatiu aixi com al caracter propi del centre</option>
+                <option name="graveA">Els actes greus d´indisciplina i les injuries i ofenses contra membres de la comunitat educativa que sobrepassen la incorreccio o la desconsideracio previstes en el article 35</option>
+                <option name="graveB">L´agressio fisica o moral,les amenaces i coaccions i la discriminacio greu a qualsevol membre de la comunitat educativa, aixi com la falta de respecte greu a la integritat i dignitat personal</option>
+                <option name="graveC">Les vexacions i humiliacions a qualsevols membre de la comunitat escolar, particularment si tenen un comportament sexista o xenofon,aixi com les que es realitzen contra els membres mes vulnerables per les seues caracteristiques personals,socials o educatives</option>
+                <option name="graveD">L´assetjament escolar</option>
+                <option name="graveE">La suplantacio de personalitat en actes de la vida docent</option>
+                <option name="graveF">La falsificacio, el deteriorament o la sustraccio de documentacio academica</option>
+                <option name="graveG">Els danys greus causats en els locals,materials o documents del centre o ens els bens dels membres de la comunitat educativa</option>
+                <option name="graveH">Els actes injustificats que pertoben greument el normal desenvolupament de les activitats del centre</option>
+                <option name="graveI">Les actuacions que puguen perjudicar greument la salut i la integritat personal dels membres de la comunitat educativa</option>
+                <option name="graveJ">La introduccio en el centre d´objetes perillosos o subtancies perjudicials per a la salut i la integritat personal del membres de la comunitat educativa</option>
+                <option name="graveK">Les conductes tipificades com a contraries a les normes de convivencia del centre educatiu si concorren circumstancies de col·lectivitat o publicitat intencionada per qualsevol mitja</option>
+                <option name="graveL">La iniciatica o l´estimul a cometre una falta que afecte greument la convivencia del el centre</option>
+                <option name="graveM">La negativa reiterada al compliment de les mesures educatives correctores adoptades davant de conductes contraries a les normes de convivencia</option>
+                <option name="graveN">La negativa reiterada al compliment de les mesures disciplinaries adoptades davant de faltes que afecten greument a la convivencia en el centre</option>
+                <option name="graveO">L´acces indegut o sense autoritzacio a fitxers i servidors del centre</option>
+                <option name="graveP">Actes atemtatoris respecte al projecte educatiu aixi com al caracter propi del centre</option>
 
                 </select>
             </p>
@@ -141,10 +140,10 @@
 
             </div>
 
-            <p>Paiporta, <input type="text" name="dia-firma">de <input type="text" name="mes-firma"> de 201 <input type="text"
-                    name="year-firma"></p>
+            <p>Paiporta, <input type="text" name="diafirma">de <input type="text" name="mesfirma"> de 201 <input type="text"
+                    name="yearfirma"></p>
              
-            <p>Signatura del cap d´estudis/director <input type="checkbox" name="firma-director"></p>
+            <p>Signatura del cap d´estudis/director <input type="checkbox" name="firmadirector"></p>
 
 
             <input type="submit" value="Enviar Formulario">
