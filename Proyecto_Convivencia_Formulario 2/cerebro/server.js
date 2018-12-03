@@ -1,20 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path=require('path');
 
 const app = express();
 
-
-
-// Escuchemos en un puerto
-
-app.listen(3000,() => {
-    console.log(" * Server EUW UP and Running");
-});
+//Sirviendo ficheros desde el servidor
+app.use(express.static(path.join(__dirname,'formulario')));
 
 // Utilizaremos body-parser para "parsear lo que nos pidan"
 app.use(bodyParser.urlencoded({
     extended:true
 }));
+
+//Parsearemos los jsones
+app.use(bodyParser.json());
 
 // Nos conectaremos a la base de datos
 const dbConfig = require('./config/database.config');
@@ -31,11 +30,16 @@ mongoose.connect(dbConfig.url,{
         process.exit();
     });
 
+    // Require Investigadores routes
+require('./app/routes/incidencia.routes.js')(app);
+
     // Vamos a definir un "punto de inicio"
 app.get('/',(req,res)=>{
-    res.json({"message":"Parte Backend de nuestro programa"});
+    res.sendFile(path.join(__dirname,'formulario/index.html'));
 });
 
 
-// Require Investigadores routes
-require('./app/routes/incidencia.routes.js')(app);
+// Escuchemos en un puerto
+app.listen(3000,() => {
+    console.log(" * Server EUW UP and Running");
+});

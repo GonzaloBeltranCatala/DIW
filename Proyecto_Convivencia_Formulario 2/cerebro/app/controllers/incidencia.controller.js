@@ -12,6 +12,190 @@ exports.create = (req,res)=>{
         });
     }
 
+    if(req.body.leveA == 'marcado'){
+        req.body.leveA = true;
+    }
+   
+    if(req.body.leveB == 'marcado'){
+        req.body.leveB = true;
+    }
+
+    if(req.body.leveC == 'marcado'){
+        req.body.leveC = true;
+    }
+
+    if(req.body.leveD == 'marcado'){
+        req.body.leveD = true;
+    }
+
+    if(req.body.leveE == 'marcado'){
+        req.body.leveE = true;
+    }
+  
+    if(req.body.leveF == 'marcado'){
+        req.body.leveF = true;
+    }
+    
+    if(req.body.leveG == 'marcado'){
+        req.body.leveG = true;
+    }
+    
+    if(req.body.leveH == 'marcado'){
+        req.body.leveH = true;
+    }
+   
+    if(req.body.leveI == 'marcado'){
+        req.body.leveI = true;
+    }
+    
+    if(req.body.leveJ == 'marcado'){
+        req.body.leveJ = true;
+    }
+    
+    if(req.body.leveK == 'marcado'){
+        req.body.leveK = true;
+    }
+
+
+    if(req.body.leveL == 'marcado'){
+        req.body.leveL = true;
+    }
+ 
+
+    if(req.body.leveM == 'marcado'){
+        req.body.leveM = true;
+    }
+
+
+    if(req.body.leveN == 'marcado'){
+        req.body.leveN = true;
+    }
+  
+    if(req.body.leveO == 'marcado'){
+        req.body.leveO = true;
+    }
+
+
+    if(req.body.leveP == 'marcado'){
+        req.body.leveP = true;
+    }
+
+    if(req.body.leveQ == 'marcado'){
+        req.body.leveQ = true;
+    }
+ 
+
+    if(req.body.leveR == 'marcado'){
+        req.body.leveR = true;
+    }
+
+
+    if(req.body.leveS == 'marcado'){
+        req.body.leveS = true;
+    }
+
+
+//graves
+    if(req.body.graveA == 'marcado'){
+        req.body.graveA = true;
+    }
+
+
+    if(req.body.graveB == 'marcado'){
+        req.body.graveB = true;
+    }
+ 
+
+    if(req.body.graveC == 'marcado'){
+        req.body.graveC = true;
+    }
+
+
+    if(req.body.graveD == 'marcado'){
+        req.body.graveD = true;
+    }
+
+
+    if(req.body.graveE == 'marcado'){
+        req.body.graveE = true;
+    }
+
+
+    if(req.body.graveF == 'marcado'){
+        req.body.graveF = true;
+    }
+ 
+
+    if(req.body.graveG == 'marcado'){
+        req.body.graveG = true;
+    }
+
+
+    if(req.body.graveH == 'marcado'){
+        req.body.graveH = true;
+    }
+
+
+    if(req.body.graveI == 'marcado'){
+        req.body.graveI = true;
+    }
+
+
+    if(req.body.graveJ == 'marcado'){
+        req.body.graveJ = true;
+    }
+
+
+    if(req.body.graveK == 'marcado'){
+        req.body.graveK = true;
+    }
+ 
+
+    if(req.body.graveL == 'marcado'){
+        req.body.graveL = true;
+    }
+
+
+    if(req.body.graveM == 'marcado'){
+        req.body.graveM = true;
+    }
+
+
+    if(req.body.graveN == 'marcado'){
+        req.body.graveN = true;
+    }
+
+
+    if(req.body.graveO == 'marcado'){
+        req.body.graveO = true;
+    }
+
+
+    if(req.body.graveP == 'marcado'){
+        req.body.graveP = true;
+    }
+
+    if(req.body.opcionA == 'marcado'){
+        req.body.opcionA = true;
+    }
+    if(req.body.opcionB == 'marcado'){
+        req.body.opcionB = true;
+    }
+    if(req.body.opcionC == 'marcado'){
+        req.body.opcionC = true;
+    }
+    if(req.body.opcionD == 'marcado'){
+        req.body.opcionD = true;
+    }
+
+    if(req.body.opcionE == 'marcado'){
+        req.body.opcionE = true;
+    }
+
+    if(req.body.opcionF == 'marcado'){
+        req.body.opcionF = true;
+    }
+
     const incidencia = new Incidencia({
         alumne: req.body.alumne,
         grupo: req.body.grupo,
@@ -77,7 +261,8 @@ exports.create = (req,res)=>{
         diafirma: req.body.diafirma,
         mesfirma: req.body.mesfirma,
         yearfirma: req.body.yearfirma,
-        firmadirector: req.body.firmadirector
+        firmadirector: req.body.firmadirector,
+        texto: req.body.texto
     })
 
     incidencia.save().then(data =>{
@@ -205,7 +390,8 @@ exports.update = (req, res) => {
         diafirma: req.body.diafirma,
         mesfirma: req.body.mesfirma,
         yearfirma: req.body.yearfirma,
-        firmadirector: req.body.firmadirector
+        firmadirector: req.body.firmadirector,
+        texto: req.body.texto
 
     }, {new: true})
     .then(incidencia => {
