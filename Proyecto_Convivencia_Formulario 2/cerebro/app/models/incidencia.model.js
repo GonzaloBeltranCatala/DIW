@@ -6,7 +6,7 @@ const IncidenciaSchema = mongoose.Schema({
     grupo: String,
     profesor: String,
     horario: String,
-    data: Date,
+    data: String,
     hora: String,
     lloc: String,
     check: String,
