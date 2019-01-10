@@ -5,10 +5,15 @@ $.getJSON( "incidencias", function( data ) {
   
   //items.push( "<li id='" + key + "' class='list-group-item'>" + val.alumne + val.profesor + "</li>");
 
-  var fila="<tr><td>"+val.alumne+"</td><td>"+val.grupo+"</td><td>"+val.profesor+"</td><td>"+val.data+"</td></tr>"
+  var fila="<tr><td>"+val.alumne+"</td><td>"+val.grupo+"</td><td>"+val.profesor+"</td><td>"+val.data+"</td><td><a href='formulario-rellenado.html'>Editar</a>"+"</td><td> <button>Borrar</button> "+"</td></tr>"
 
 
   $( "#tablalista" ).append(fila);
+
+
+  $("button").click(function(){
+    $("#tablalista").remove();
+  });
 
   });
  
@@ -18,3 +23,4 @@ $.getJSON( "incidencias", function( data ) {
   //}).appendTo( "#divLista" );
 });
  
+
