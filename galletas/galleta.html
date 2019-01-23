@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="galleta.css">
+    <title>prototipo</title>
+
+    <script>
+            var i = 0;
+            function rex() {
+                i++;
+                document.getElementById("pantalla1").value = i;
+            }
+            var ii = 0;
+            function estego() {
+                ii++;
+                document.getElementById("pantalla2").value = ii;
+            }
+
+            var iii = 0;
+            function huevo() {
+                iii++;
+                document.getElementById("pantalla3").value = iii;
+            }
+
+            function total(){
+                var total = i+ii+iii;
+                document.getElementById("pantalla4").value = total +" galletas compradas";
+
+                var num=document.getElementById("dinero").innerHTML;
+
+                if (num.includes("€")){
+                    document.getElementById("dinero").innerHTML = "Precio:";
+                }
+                else{
+                    document.getElementById("dinero").innerHTML = document.getElementById("dinero").innerHTML + total+"€";
+                }
+
+
+            }
+  
+
+        </script>
+</head>
+<body>
+
+        <div class="container">
+                <div class="header">
+                        <img src="img/logo.png">
+
+                </div>
+
+                <div class="menu">
+                    <h1>MENU</h1>
+                    <button>SALADO</button>
+                    <button>DULCE</button>
+                    
+                    <button onclick="total()">COMPRAR GALLETAS</button>
+
+                    <input type="text" id="pantalla4" value="0 galletas compradas" disabled>
+
+                    <p id="dinero">Precio:</p>
+
+                </div>
+
+                <div class="content"> 
+                    <button id="rex" onclick="rex()"><img src="img/rex.png"></button>
+
+                    <button id="estego" onclick="estego()"> <img src="img/placas.png"> </button>
+
+                   <button id="huevo" onclick="huevo()"><img src="img/huevo.png"></button>
+
+                   <br>
+                   
+                   <input type="text" id="pantalla1" value="0" disabled>
+
+                   <input type="text" id="pantalla2" value="0" disabled>
+
+                   <input type="text" id="pantalla3" value="0" disabled>
+                   
+                  
+
+                  
+                 
+                    
+                </div>
+                
+                <div class="footer">
+                       
+                        
+                </div>
+              </div>
+    
+</body>
+</html>

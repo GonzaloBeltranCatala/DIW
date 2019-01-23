@@ -1,0 +1,60 @@
+.container {
+    display: grid;
+    grid-gap: 5px;    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "c c c c c c c c c c m m"
+        "f f f f f f f f f f f f";
+        background:url("img/fondo.png");
+}
+
+
+@media screen and (max-width: 640px) {
+    .container {
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+
+.header {
+    grid-area: h;
+  
+}
+
+.menu {
+    grid-area: m;
+
+}
+
+.content {
+    grid-area: c;
+    margin-top: 11%;
+}
+
+.footer {
+   grid-area: f;
+
+}
+
+button{
+    background-color: burlywood;
+}
+
+textarea {
+    resize: none;
+ }
+
+ 
+ 
+
+ #pantalla2{
+    margin-left: 3%;
+    margin-right: 3%;
+     }
+
+   
