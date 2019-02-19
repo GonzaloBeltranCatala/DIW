@@ -1,0 +1,181 @@
+/*fondo de pantalla*/
+body{
+   background-image: url("img/fondo.jpg");
+   background-repeat:no-repeat;
+   background-size: cover;
+   height: 100%;
+   overflow:hidden; 
+}
+
+/*Pagina Vista*/
+
+/*Seccion Salir*/
+/*boton salir*/
+#salir{
+   padding-left: 40%;
+   
+   }
+/*input mensaje de bienvenida*/
+ #mensaje-welcome{
+      width: 80%;
+      border-style: hidden;
+      color: white;
+      background-color: transparent;
+   }
+
+/*Seccion Menu*/
+#menu h1{
+color: white;
+}
+/*boton iniciar juego*/
+#iniciar{
+   width: 150px;
+}
+
+
+/*Seccion juego*/
+#juego{
+  display: none;
+  padding-top:50px; 
+  
+}
+
+/*div tabla de letras botones*/
+#grupo1{
+padding-left: 25%;
+float: left;  
+}
+
+/*letras botones*/
+.boton{
+   width: 50px; 
+   color: black;
+}
+/*boton desactivado*/
+.boton:disabled {
+   color: white;
+}
+
+/*div horca y fallos*/
+#grupo2{
+   padding-left: 50%;
+
+}
+
+/*input de fallos*/
+#fallos{
+   width: 10px;
+   border-style: hidden;
+   color: red;
+   background-color: transparent;
+   }
+
+/*div input de la palabra*/
+#grupo3{
+   padding-left: 25%;
+}
+
+/*input de la palabra*/
+#pantalla{
+   width: 625px;
+   color: black;
+   text-align: center;
+
+
+}
+
+/*div pistas*/
+#grupo4{
+   padding-top: 50px;
+   padding-left: 30%;
+  
+   }
+
+/*boton de pista*/
+ #boton-pista{
+   width: 150px;
+   }
+
+/*input pista*/
+ #texto-pista{
+   width: 450px;
+    border-style: hidden;
+   color: black;
+   background-color: transparent;
+   }
+
+
+/* Pagina Login */
+.container{
+   width:40%;
+   margin:0 auto;
+   margin-top:10%; 
+}
+
+/* Login */
+#div_login{
+   
+   width: 450px;
+   height: 300px;
+   box-shadow: 0px 2px 2px 0px  gray;
+   margin: 0 auto;
+   border-radius:15px;
+   background-color: grey;
+}
+
+/*titulo del login*/
+#div_login h1{
+   margin-top: 0px;
+   font-weight: normal;
+   padding: 10px;
+   background-color: black;
+   color: white;
+   font-family: sans-serif;
+   text-align: center;
+   border-radius:15px 15px 0px 0px;
+}
+
+#div_login div{
+   clear: both;
+   margin-top: 10px;
+   padding: 5px;
+   
+}
+
+#div_login .textbox{
+   width: 80%;
+   padding: 5px;
+  
+}
+/*iniciar sesion */
+#sesion{
+   padding: 7px;
+   width: 110px;
+   background-color: black;
+   border-radius:15px;
+   color: white;
+
+}
+/*crear usuario */
+#crear{
+   padding: 7px;
+   width: 110px;
+   background-color: black;
+   border-radius:15px;
+   color: white;
+}
+/*mensajes de error */
+#error{
+   width: 80%;
+   border-style: hidden;
+   color: black;
+   background-color:grey; 
+}
+
+/* Admin */
+
+#mensaje-borra{
+   border-style: hidden;
+   color: black;
+   background-color: transparent;
+}
