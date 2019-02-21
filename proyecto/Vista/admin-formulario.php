@@ -1,19 +1,21 @@
 <?php
 session_start();
 include("../Vista/head.php");
-//include("../Modelo/admin-palabra.php");
-//include("../Modelo/admin-pista.php");
+include("../Modelo/admin-palabra.php");
+include("../Modelo/admin-pista.php");
 include("../Modelo/borra-usuario.php");
 ?>
 
 
 <body>
 <div class="container">
+
     <form method="post" action="">
 
-<!--
-    <h1>Crear Palabra</h1>
-        <div>
+        <div id="crearpalabras">
+
+        <h1>Crear Palabra</h1>
+
         <select id="txt_temas" name="txt_temas">
             <option value="1">Anime</option>
             <option value="2">Libros</option>
@@ -36,13 +38,13 @@ include("../Modelo/borra-usuario.php");
             </div>
 
             <div>
-                <input type="text" name="error" id="error" value='<?php echo $fila ?>' disabled/>
+                <input type="text" class="mensajes" name="mensaje-crear" id="mensaje-crear" value='<?php echo $mensajecrear ?>' disabled/>
             </div>
 
 
         </div>
--->
-        <div>
+
+        <div id="borra-usuario">
         <h1>Borrar Usuario</h1>
 
             <div>
@@ -54,11 +56,22 @@ include("../Modelo/borra-usuario.php");
             </div>
 
             <div>
-                <input type="text" name="mensaje-borra" id="mensaje-borra" value='<?php echo $mensaje ?>' disabled/>
+                <input type="text" class="mensajes" name="mensaje-borra" id="mensaje-borra" value='<?php echo $mensaje ?>' disabled/>
+
             </div>
         
         </div>
     </form>
+
+<div id="saliradmin">
+
+<form method='post' action="../Controlador/controlador.php">
+            <input   type="submit" value="Salir de Admin" name="logout">
+</form> 
+
+</div>
+   
+
 </div>
 </body>
 </html>

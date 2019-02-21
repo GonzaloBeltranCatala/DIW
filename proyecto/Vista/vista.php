@@ -14,7 +14,7 @@ if(isset($_SESSION['Nombre_Usuario'])) {
 <!--salir -->
 <div id="salir">
 
-        <form method='post' action="../Controlador/index.php">
+        <form method='post' action="../Controlador/controlador.php">
             <input id="mensaje-welcome" type="text" value='<?php echo $mensaje ?>'disabled>
             <input type="submit" value="Salir del Juego" name="logout">
         </form>

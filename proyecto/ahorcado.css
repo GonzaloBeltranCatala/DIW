@@ -174,8 +174,22 @@ float: left;
 
 /* Admin */
 
-#mensaje-borra{
+.mensajes{
    border-style: hidden;
    color: black;
    background-color: transparent;
+}
+#crearpalabras{
+   float: left;  
+ 
+}
+
+#borra-usuario{
+   padding-left: 50%;
+   padding-top: 0.5%;
+}
+
+#saliradmin{
+   padding-top: 50%;
+
 }
